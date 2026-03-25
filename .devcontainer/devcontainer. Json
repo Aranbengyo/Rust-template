@@ -1,1 +1,19 @@
-
+{
+  "name": "Rust Development Environment (Template)",
+  "image": "mcr.microsoft.com/devcontainers/rust:latest",
+  "features": {},
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "rust-lang.rust-analyzer",
+        "tamasfe.even-better-toml",
+        "serayuzgur.crates",
+        "vadimcn.vscode-lldb"
+      ]
+    }
+  },
+  "postCreateCommand": "rustup default stable && rustup component add rustfmt clippy && echo '✅ Rust + rust-analyzer pronti per te! 🦀'",
+  "remoteEnv": {
+    "CARGO_TARGET_DIR": "/workspace/target"
+  }
+}
